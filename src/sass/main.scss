@@ -1,0 +1,129 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: inconsolata, sans-serif;
+  color: #EEEEEE;
+  background-color: #111111;
+  max-height: 100vh;
+}
+
+$header-height: 7.5em;
+
+.header {
+  max-height: $header-height;
+}
+
+h1.title,
+h2.subtitle {
+  padding: 0;
+  margin: 0;
+}
+
+h1.title {
+  font-weight: normal;
+  font-size: 48pt;
+  width: 100%;
+  text-align: center;
+}
+
+h2.subtitle {
+  color: #777777;
+  font-weight: lighter;
+  font-size: 14pt;
+  width: 100%;
+  text-align: center;
+}
+
+p.description {
+  display: block;
+  font-weight:lighter;
+}
+
+.container {
+  margin: 0 auto;
+  position: relative;
+  display: block;
+  min-height: 100vh;
+}
+
+.row {
+  float: left;
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+@media (min-width: 1080px) {
+  .container {
+    width: 1080px;
+  }
+}
+
+@media (min-width: 960px) and (max-width: 1080px) {
+  .container {
+    width: 960px;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 960px) {
+  .container {
+    width: 640px;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 640px) {
+  .container {
+    width: 480px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    margin: 0;
+    width: 100%;
+  }
+}
+
+.half-width {
+  float: left;
+  position: relative;
+  padding: 1em;
+  display: block;
+}
+
+.half-width.copy {
+  hyphens: auto;
+  overflow-wrap: break-word;
+  text-align: justify;
+  overflow-y:scroll;
+  margin-top: -$header-height;
+  padding-bottom: 2em;
+  max-height: calc(100vh - 3em);
+}
+
+.half-width.copy p:first-of-type {
+  // margin-top: $header-height + 1em;
+}
+
+@media (min-width: 480px) {
+  .half-width {
+    width: calc(50% - 2em - 2px);
+  }
+}
+
+@media (max-width: 480px) {
+  .half-width {
+    width: 100%;
+  }
+}
+
+a.spacer:before {
+  visibility: hidden;
+  content: "";
+  display: block;
+  height: 0px;
+}
+
+p.go-to-top {
+  text-align: center;
+}
